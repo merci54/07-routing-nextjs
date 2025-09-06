@@ -22,7 +22,7 @@ export default function NoteDetails() {
         <p className={css.content}>{data?.content}</p>
         <p className={css.date}>{data?.createdAt}</p>
       </div>
-      <Link className={css.back} href="/notes">
+      <Link className={css.back} href="/notes/filter/all">
         Back to all notes
       </Link>
     </div>

@@ -10,8 +10,13 @@ import Pagination from "@/components/Pagination/Pagination";
 import Modal from "@/components/Modal/Modal";
 import NoteList from "@/components/NoteList/NoteList";
 import NoteForm from "@/components/NoteForm/NoteForm";
+import { Note } from "@/types/note";
 
-export default function NotesPages() {
+interface NotesPageProps {
+  tag: Note["tag"] | undefined;
+}
+
+export default function NotesPage({ tag }: NotesPageProps) {
   const [page, setPage] = useState(1);
   const [query, setQuery] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -19,8 +24,8 @@ export default function NotesPages() {
   const [debouncedQuery] = useDebounce(query, 300);
 
   const { data } = useQuery({
-    queryKey: ["notes", { page: page, query: debouncedQuery }],
-    queryFn: () => fetchNotes(page, debouncedQuery),
+    queryKey: ["notes", { page: page, query: debouncedQuery, tag }],
+    queryFn: () => fetchNotes(page, debouncedQuery, tag),
     refetchOnMount: false,
     placeholderData: keepPreviousData,
   });
