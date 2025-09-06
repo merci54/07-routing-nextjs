@@ -6,33 +6,33 @@ export default function SidebarNotes() {
     <ul className={css.menuList}>
       {/* список тегів */}
       <li className={css.menuItem}>
-        <Link href={`/notes/filter/all`} className={css.menuLink}>
-          All notes
+        <Link href={`/notes/filter/All`} className={css.menuLink}>
+          All
         </Link>
       </li>
       <li className={css.menuItem}>
-        <Link href={`/notes/filter/work`} className={css.menuLink}>
+        <Link href={`/notes/filter/Work`} className={css.menuLink}>
           Work
         </Link>
       </li>
 
       <li className={css.menuItem}>
-        <Link href={`/notes/filter/personal`} className={css.menuLink}>
+        <Link href={`/notes/filter/Personal`} className={css.menuLink}>
           Personal
         </Link>
       </li>
       <li className={css.menuItem}>
-        <Link href={`/notes/filter/meeting`} className={css.menuLink}>
+        <Link href={`/notes/filter/Meeting`} className={css.menuLink}>
           Meeting
         </Link>
       </li>
       <li className={css.menuItem}>
-        <Link href={`/notes/filter/shopping`} className={css.menuLink}>
+        <Link href={`/notes/filter/Shopping`} className={css.menuLink}>
           Shopping
         </Link>
       </li>
       <li className={css.menuItem}>
-        <Link href={`/notes/filter/todo`} className={css.menuLink}>
+        <Link href={`/notes/filter/Todo`} className={css.menuLink}>
           Todo
         </Link>
       </li>
